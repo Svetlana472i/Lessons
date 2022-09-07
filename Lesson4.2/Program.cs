@@ -9,6 +9,10 @@ if (isNumber == false)
 
 int GetComposition(int n)
 {
+    if (number <= 0)
+    {
+        Console.WriteLine("Введено отрицательное число или 0");
+    }
     int composition = 1;
     for (int i = 2; i <=n; i++)
    {
