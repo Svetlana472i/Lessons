@@ -19,6 +19,11 @@ int GetLengthNumber(int number)
         count++;
         number = number / 10;
     }
+    Console.WriteLine(Convert.ToBoolean(8));
+    Console.WriteLine(Convert.ToBoolean(0));
+    Console.WriteLine(Convert.ToBoolean(-89));
+    Console.WriteLine(Convert.ToBoolean("true"));
+    Console.WriteLine(convert.ToBoolean("false"));
     return count;
 }
 int result = GetLengthNumber(number);
