@@ -10,7 +10,11 @@ if (isNumber == false)
 int GetLengthNumber(int number)
 {
     int count = 0;
-    while (number > 0)
+    if (number == 0)
+    {
+        return 1;
+    }
+    while (number != 0)
     {
         count++;
         number = number / 10;
