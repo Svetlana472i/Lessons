@@ -30,13 +30,14 @@ Console.Write(array[array.Length-1]);
 Console.WriteLine("]");
 }
 
+int[] chengearray = new int[length];
 int[] ChengeNumberInArray(int[] arr)
 {
     for (int i = 0; i < length; i++)
     {
-       arr[i] = -arr[i];
+       chengearray[i] = -arr[i];
     }
-    return arr;
+    return chengearray;
 }
 
 int[] array = FillArray(length);
