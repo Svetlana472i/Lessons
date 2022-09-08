@@ -1,7 +1,7 @@
-﻿Console.WriteLine("Введите число");
+﻿Console.WriteLine("Введите число >1");
 bool isNumber = int.TryParse(Console.ReadLine(), out int n);
 
-if (!isNumber || n <=0)
+if (!isNumber || n <=1)
 {
     Console.WriteLine("Данные введены неверно");
     return;
