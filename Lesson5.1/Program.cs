@@ -42,7 +42,22 @@ int GetSumPositiveNumberInArray(int[] array)
     return sunPositiveNumber;
 }
 
+int GetSumNegativeNumberInArray(int[] array)
+{
+    int sunNegativeNumber = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] < 0)
+        {
+            sunNegativeNumber = sunNegativeNumber + array[i];
+        }
+    }
+    return sunNegativeNumber;
+}
+
 int [] array = FillArray(length);
 PrintArray(array);
 int sunPositiveNumber = GetSumPositiveNumberInArray(array);
+int sunNegativeNumber = GetSumNegativeNumberInArray(array);
 Console.WriteLine($"Сумма положительных чисел равна {sunPositiveNumber}");
+Console.WriteLine($"Сумма отрицательных чисел равна {sunNegativeNumber}");
