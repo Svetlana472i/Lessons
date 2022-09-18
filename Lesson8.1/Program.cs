@@ -33,8 +33,8 @@ int[,] ChangeString(int [,] array)
 for (int j = 0; j < array.GetLength(1); j++)
     {
         int temp = array[0, j];
-        array[0, j] = array[array.GetLength(1)-1, j];
-        array[array.GetLength(1)-1, j] = temp;
+        array[0, j] = array[array.GetLength(0)-1, j];
+        array[array.GetLength(0)-1, j] = temp;
     }
 
     return array;
