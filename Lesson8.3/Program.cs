@@ -27,10 +27,15 @@ int[,] FillArray(int m, int n)
     return array;
 }
 
+int numCount = 0;
 int[,] FindRepeats(int [,] array)
 {
     int[,] temp = new int [2, array.GetLength(0) * array.GetLength(1)];
-    int numCount = 0;
+    for (int i = 0; i < array.GetLength(0) * array.GetLength(1); i++)
+    {
+        temp[0, i] = -1;
+    }
+    
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
@@ -71,17 +76,9 @@ void Print2DArray(int[,] array)
 void Print2Array(int[,] array)
 {
     {
-        for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < numCount; j++)
         {
-            for (int j = 0; j < array.GetLength(1); j++)
-            {
-                if (array[0, j] == 0 && array[1, j] ==0)
-                {
-                    break;
-                }
-             Console.Write($"{array[i,j]} ");
-             }
-        Console.WriteLine();
+          Console.WriteLine($"{array[0,j]} встречается {array[1, j]} ");
         }
     }
 }
